@@ -7,9 +7,9 @@ if number < 0 and number != 0:
     lastdigit = -unsigned_digit
 else:
     lastdigit = unsigned_digit
-if number > 5:
+if lastdigit > 5:
     print(f"Last digit of {number:d} is {lastdigit} and is greater than 5")
-elif number == 0:
+elif lastdigit == 0:
     print(f"Last digit of {number:d} is {lastdigit} and is 0")
-elif number < 6:
+elif lastdigit < 6:
     print(f"Last digit of {number:d} is {lastdigit} and is less than 6 and not 0")

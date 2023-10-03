@@ -3,7 +3,7 @@ import random
 number = random.randint(-10000, 10000)
 unsigned_digit = abs(number) % 10
 lastdigit = 0
-if number < 0:
+if number < 0 and number != 0:
     lastdigit = -unsigned_digit
 else:
     lastdigit = unsigned_digit

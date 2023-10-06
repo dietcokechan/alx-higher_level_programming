@@ -4,5 +4,5 @@ def element_at(my_list, idx):
         return None
     else:
         for i in my_list:
-            if idx is my_list[i]:
+            if idx == my_list[i]:
                 return i

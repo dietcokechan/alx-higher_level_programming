@@ -1,4 +1,5 @@
 *.txt
 *.pyc
+.vscode/
 
 !hidden_4.pyc

@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <Python.h>
+#include <sys/types.h>
+#include <Python.h>
+#include <object.h>
+#include <listobject.h>
+#define PY_SSIZE_T_CLEAN
 
 void print_python_list_info(PyObject *p)
 {

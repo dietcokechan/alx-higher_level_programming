@@ -45,10 +45,10 @@ class Square:
 
     def my_print(self):
         """Print square with #'s
-        Returns: visual square
+        Returns: None
         """
         if self.__size == 0:
             print()
             return
         for i in range(self.__size):
-                print("".join(["#" for j in range(self.__size)]))
+            print("".join(["#" for j in range(self.__size)]))

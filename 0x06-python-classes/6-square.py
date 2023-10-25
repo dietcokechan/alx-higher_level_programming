@@ -53,7 +53,7 @@ class Square:
             value (tuple): position
         Returns: None
         """
-        if (not isinstance(value, tuple) or
+        if (type(value) is not tuple or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):

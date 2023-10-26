@@ -3,3 +3,4 @@
 .vscode/
 
 !hidden_4.pyc
+!0x07-python-test_driven_development/tests/*.txt

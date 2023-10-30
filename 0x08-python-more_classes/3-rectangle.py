@@ -50,4 +50,4 @@ class Rectangle:
         """changes str object"""
         if not self.perimeter():
             return ""
-        return("\n".join("#" * self.width for i in range(self.height)))
+        return ("\n".join("#" * self.width for i in range(self.height)))

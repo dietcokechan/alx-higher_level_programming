@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """class definition for locked class"""
 
+
 class LockedClass:
     """prevent user from dynamically creating new instance attr,
     except if the new instance attr is called first_name

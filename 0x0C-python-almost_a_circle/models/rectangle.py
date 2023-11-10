@@ -84,6 +84,7 @@ class Rectangle(Base):
         )
 
     def update(self, *args, **kwargs):
+        """assign arguments to attributes"""
         if args:
             i = 0
             keys = ['id', 'width', 'height', 'x', 'y']

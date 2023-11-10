@@ -24,3 +24,16 @@ class Square(Rectangle):
         """override str method"""
         return "[{}] ({}) {}/{} - {}".format(
             type(self).__name__, self.id, self.x, self.y, self.size)
+
+    def update(self, *args, **kwargs):
+        """assign arguments to attributes"""
+        if args:
+            i = 0
+            keys = ['id', 'size', 'x', 'y']
+            for arg in args:
+                setattr(self, keys[i], arg)
+                i += 1
+        elif kwargs:
+            for key, val in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, val)

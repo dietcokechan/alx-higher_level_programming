@@ -58,9 +58,14 @@ class Rectangle(Base):
         self.__y = value
 
     def validate(self, input, value):
+        """validate input"""
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(input))
         if (input == 'width' or input == 'height') and value <= 0:
             raise ValueError("{} must be > 0".format(input))
         if (input == 'x' or input == 'y') and value < 0:
             raise ValueError("{} must be >= 0".format(input))
+
+    def area(self):
+        """get area of rectangle"""
+        return self.width * self.height

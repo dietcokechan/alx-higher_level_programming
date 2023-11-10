@@ -82,3 +82,11 @@ class Rectangle(Base):
             type(self).__name__, self.id, self.x, self.y,
             self.width, self.height
         )
+
+    def update(self, *args):
+        if args:
+            i = 0
+            keys = ['id', 'width', 'height', 'x', 'y']
+            for arg in args:
+                setattr(self, keys[i], arg)
+                i += 1

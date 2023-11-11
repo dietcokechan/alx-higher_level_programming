@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """base class"""
 import json
+import os.path
 
 
 class Base:
@@ -27,7 +28,7 @@ class Base:
             strs = cls.to_json_string([i.to_dictionary() for i in list_objs])
         except Exception as e:
             strs = '[]'
-        with open(cls.__name__+'.json', 'w', encoding='utf-8') as file:
+        with open(cls.__name__ + '.json', 'w', encoding='utf-8') as file:
             file.write(strs)
 
     @staticmethod
@@ -45,3 +46,13 @@ class Base:
         if ins:
             ins.update(**dictionary)
             return ins
+
+    @classmethod
+    def load_from_file(cls):
+        """return list of instances"""
+        if not os.path.isfile(cls.__name__ + '.json'):
+            return []
+        else:
+            with open(cls.__name__ + '.json', 'r', encoding='utf-8') as file:
+                dicts = cls.from_json_string(file.read())
+            return [cls.create(**d) for d in dicts]

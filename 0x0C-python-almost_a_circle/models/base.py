@@ -25,7 +25,12 @@ class Base:
         """writes json string to a file"""
         try:
             strs = cls.to_json_string([i.to_dictionary() for i in list_objs])
-        except:
+        except Exception as e:
             strs = '[]'
         with open(cls.__name__+'.json', 'w', encoding='utf-8') as file:
             file.write(strs)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns dictionary of json string"""
+        return json.loads(json_string or "[]")

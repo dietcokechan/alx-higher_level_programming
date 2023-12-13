@@ -1,5 +1,5 @@
 -- lists all genres by their rating
-SELECT tg.name, SUM(tr.rate) AS rating FROM tv_show_genres tgs
+SELECT tg.name, SUM(tr.rate) AS rating sum FROM tv_show_genres tgs
 JOIN tv_genres tg
 ON tg.id = tgs.genre_id
 JOIN tv_show_ratings tr

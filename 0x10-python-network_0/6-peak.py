@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# find a peak in a list of unsorted integers
+""" find a peak in a list of unsorted integers """
 
 
 def recur(low, high, nums):

@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ find a peak in a list of unsorted integers """
 
+
 def recursivesearch(low, high, nums):
-    mid = (low + high) / 2
+    mid = (low + high) // 2
     if low == high:
         return nums[high]
     if nums[mid] < nums[mid + 1]:

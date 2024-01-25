@@ -6,3 +6,4 @@
 !0x07-python-test_driven_development/tests/*.txt
 !0x09-python-everything_is_object/*.txt
 !0x0A-python-inheritance/tests/*.txt
+!0x10-python-network_0/*.txt

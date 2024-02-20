@@ -11,7 +11,7 @@ request(url, (err, res, body) => {
     let count = 0;
     for (const i in results) {
       for (const char in results[i].characters) {
-        if (char.search('/18/') > 0) count += 1;
+        if (char.search('/18/') > 0) { count += 1; }
       }
     }
     console.log(count);

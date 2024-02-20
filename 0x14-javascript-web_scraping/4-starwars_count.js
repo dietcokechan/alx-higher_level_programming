@@ -10,7 +10,7 @@ request(url, (err, res, body) => {
     const results = JSON.parse(body).results;
     let count = 0;
     for (const i in results) {
-      for (const char in results[i].characters) {
+      for (const char of results[i].characters) {
         if (char.search('/18/') > 0) { count += 1; }
       }
     }

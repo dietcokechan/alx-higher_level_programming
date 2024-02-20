@@ -10,10 +10,10 @@ request(url, (err, res, body) => {
     const results = {};
     for (const todo of JSON.parse(body)) {
       if (todo.completed) {
-        if (results[todo['userId']] === undefined) {
-          results[todo['userId']] = 0;
+        if (results[todo.userId] === undefined) {
+          results[todo.userId] = 0;
         }
-        results[todo['userId']] += 1;
+        results[todo.userId] += 1;
       }
     }
     console.log(results);

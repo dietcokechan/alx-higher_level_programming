@@ -1,5 +1,5 @@
 $('document').ready(function () {
-    $.getJSON('https://swapi-api.alx-tools.com/api/people/5/?format=json', function (value) {
-        $('DIV#character').text(value.name);
-    });
+  $.getJSON('https://swapi-api.alx-tools.com/api/people/5/?format=json', function (value) {
+    $('DIV#character').text(value.name);
+  });
 });
